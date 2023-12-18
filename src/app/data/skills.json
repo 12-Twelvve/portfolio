@@ -1,0 +1,8 @@
+{
+"labels": ["Stats & ML Modeling","Inference", "Experimentation",
+           "Model Deployment", "ML Ops", "Data Pipelines",
+            "Databases", "Storytelling", "Data Visualization",
+            "Business Insights", "Metrics & Reporting",
+            "Data Structure & Algorithms"],
+"data":[80,40,60,40,30,40,70,50,70,40,75,60]
+}
