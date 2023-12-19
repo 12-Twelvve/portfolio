@@ -1,0 +1,10 @@
+/* styles.css */
+
+@media (min-width: 768px) {
+    .card-container {
+      display: flex;
+    }
+    .card {
+      width: 50%; /* Two cards side by side */
+    }
+  }
