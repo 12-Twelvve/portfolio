@@ -34,3 +34,40 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+/* Define custom scrollbar styles */
+
+/* WebKit Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 14px;
+
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #011c23; /* Adjust as needed */
+  border-radius: 14px;
+}
+
+/* Mozilla Firefox Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  border-radius: 14px;
+  scrollbar-color: #011c23 transparent; /* Adjust as needed */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 14px;
+
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #011c23; /* Adjust as needed */
+  border-radius: 14px;
+}
+
+
+.shadow-custom {
+  box-shadow: 0 4px 10px rgba(117, 207, 255, 0.1), 0 2px 6px rgba(117, 207, 255, 0.1);
+}

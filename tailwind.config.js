@@ -12,7 +12,7 @@ module.exports = {
           "100": "#0c0c0c",
           "200": "#0a0a0a",
           "300": "rgba(0, 0, 0, 0.2)",
-          "500":"#282c33",
+          "500":"#181818",
         },
         black: "#000",
         white: "#fff",
@@ -20,7 +20,8 @@ module.exports = {
         blue: "#00f",
         yellow: "#ff0",
         red:"#f00",
-        bggray:"#353535",
+        bggray:"#181818",
+        bggrayarc:"#1D1D1D",
       },
       spacing: {},
       fontFamily: {

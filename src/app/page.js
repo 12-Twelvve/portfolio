@@ -3,7 +3,8 @@ import joyImage from './data/images/joyboy.png'
 import boaImage from './data/images/sep2.jpg'
 import RadarChart from './components/RadarChart'
 import styles from './styles.module.css'
- 
+import NameDiv from './components/NameDiv' 
+
 async function getQuote(){
   // const res = await fetch("https://api.quotable.io/random", {cache:"no-store"}); //each reload
   const res = await fetch("https://api.quotable.io/random", {next:{revalidate:86400}}); //after one day
@@ -21,41 +22,22 @@ export default async function Home() {
         <div className="w-full md:w-3/5 max-md:w-full max-md:mt-10  mt-5  md:min-h-[80vh] md:max-h-[80vh]"> 
           <div className="flex flex-col max-md:max-w-full">
             {/* Name Div top */}
-            <div className="flex flex-col align-center justify-between items-center bg-neutral-950
-                              pl-1 pr-1 pt-1 pb-1 gap-5 rounded-3xl no-underline shadow-xl shadow-gray-800 md:flex-row max-md:max-w-full md:min-h-[30vh] md:max-h-[30vh] ">
-                <div class="flex flex-col justify-between p-4  ">
-                    <div className="text-white font-bold ">
-                      Data Enthusiast
-                    </div>
-                    <div className="bg-white shrink-0 h-0.5 mt-5" />
-                    <div className="text-white lg:text-50xl  font-bold mt-3">
-                      KUBER BUDHATHOKI
-                    </div>
-                </div>
-                <div className="md:w-[40%] mx-3">
-                <Image
-                    src={joyImage}
-                    // transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0
-                    className="object-cover h-auto max-w-full rounded-3xl  "
-                    alt="Picture of the joyboy from One Piece"
-                  />
-                </div>
-            </div>
+            <NameDiv/>
 
             {/* bottom panel */}
             <div className="flex flex-col md:flex-row mt-4 ">
               {/* left card */}
               <div className="w-full md:w-1/2 p-1">
                 <div className="h-[45vh]">
-                <div className="bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl">
-                  <div className="bg-red flex flex-col items-stretch  px-5 py-2 rounded-3xl max-md:mt-4"> 
-                    
+                <div className=" flex flex-col items-stretch justify-center items-center bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl">
+                  <div className="flex flex-col items-stretch justify-center items-center  px-5 py-2 rounded-3xl max-md:mt-4"> 
+
                     <div className="flex items-stretch justify-between gap-4">
                       <div className="bg-neutral-700 flex flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
-                        <div className="bg-red text-white text-center text-40xl text-center font-bold">
+                        <div className="text-white text-center text-40xl text-center font-bold">
                             4
                         </div>
-                        <div className="bg-blue text-center text-lg ">
+                        <div className="text-center text-lg ">
                            Cities
                         </div>
                       </div>

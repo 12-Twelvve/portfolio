@@ -8,11 +8,12 @@ export const metadata = {
 }
 
 import NavLayout from './components/Layout'
+import StoreProvider from './provider'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{<NavLayout>{children}</NavLayout>}</body>
+      <body className={inter.className}>{<StoreProvider><NavLayout>{children}</NavLayout></StoreProvider> }</body>
     </html>
   )
 }
