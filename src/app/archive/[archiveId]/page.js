@@ -41,8 +41,8 @@ export default function ArchiveCardDetail({params}) {
               </div>
             </div>
             {/* right side panel */}
-            <div className="bg-neutral-950 shadow-xl shadow-gray-100 max-sm:h-[60vh] w-full md:w-2/5 mt-5 pt-6 rounded-3xl">
-              <div className="md:w-[50%] mx-3 mx-auto ">
+            <div className="bg-neutral-950 shadow-xl shadow-gray-100 min-h-[66vh] max-h-[66vh] max-sm:h-[60vh] w-full md:w-2/5 mt-6 pt-6 rounded-3xl">
+              <div className="md:w-[40%] mx-3 mx-auto ">
               <img src={card?.imageurl} class="object-cover w-full h-full shadow-custom" />
               </div>
               <div class="w-full text-center sm:p-8">

@@ -3,6 +3,7 @@
 import ArchiveCard from "../components/ArchiveCard"
 import { useContext, useEffect } from "react"
 import { StoreContext } from "../context"
+import LoadingText from "../components/LoadingText"
 
 const archives_file = [
     {"id":1,"project_title":"The Deadpool and Wolverine","projdesc":"This is cool we are legion","imageurl":"https://source.unsplash.com/8n7ipHhI8CI"},
@@ -29,9 +30,9 @@ export default function Archive() {
     return (
         <div className="bg-bggrayarc overflow-auto py-1 mt-5 max-md:mt-10 h-[80vh] w-[90%] m-auto custom-scrollbar">
         <div class="columns-1 gap-4 space-y-4 p-4 sm:columns-2 md:columns-4 lg:columns-4">
-            {archives_file.map((a, index)=>(
+            {archives_file?archives_file.map((a, index)=>(
                 <ArchiveCard key={index} archive={a}/>
-            ))}
+            )):<LoadingText/>}
         </div>
         </div>
       )
