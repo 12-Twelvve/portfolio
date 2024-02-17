@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import joyImage from './data/images/joyboy.png'
 import boaImage from './data/images/sep2.jpg'
 import RadarChart from './components/RadarChart'
-import styles from './styles.module.css'
 import NameDiv from './components/NameDiv' 
+import World from './components/World'
 
 async function getQuote(){
   // const res = await fetch("https://api.quotable.io/random", {cache:"no-store"}); //each reload
@@ -16,7 +15,7 @@ export default async function Home() {
   const quoteoftheday = await getQuote()
 
   return (
-      <div className="px-12 py-1  h-[85vh]">
+      <div className="px-12 py-1  h-[80vh]">
       <div className="gap-5 flex max-md:flex-col  md:flex-row lg:flex-row xl:flex-row  max-md:gap-0">
         {/* left side name panel bar */}
         <div className="w-full md:w-3/5 max-md:w-full max-md:mt-10  mt-5  md:min-h-[80vh] md:max-h-[80vh]"> 
@@ -31,7 +30,6 @@ export default async function Home() {
                 <div className="h-[45vh]">
                 <div className=" flex flex-col items-stretch justify-center items-center bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl">
                   <div className="flex flex-col items-stretch justify-center items-center  px-5 py-2 rounded-3xl max-md:mt-4"> 
-
                     <div className="flex items-stretch justify-between gap-4">
                       <div className="bg-neutral-700 flex flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
                         <div className="text-white text-center text-40xl text-center font-bold">
@@ -61,7 +59,7 @@ export default async function Home() {
 
                     <div className="bg-neutral-700 flex  h-[60px] flex-col justify-center mt-4 rounded-3xl" >
                       <div className="text-center text-lg font-bold">
-                          Doesnot Build For Your Phone
+                          Built Like A King From OPM
                       </div>
                     </div>
                     <div className="bg-neutral-700 flex flex-col items-center mt-4 px-3 py-4 rounded-3xl">
@@ -81,19 +79,16 @@ export default async function Home() {
               <div className="w-full md:w-1/2 p-1">
                 <div className="h-[45vh]">
                   <div className="bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl">
-                    <div className="flex flex-col items-stretch mx-auto px-8 py-8 rounded-3xl max-md:mt-4">
-                    <div>floating Icons.....</div>
-                    </div>
+                    <World />
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
         </div>
 
         {/* right side kinng panel */}
-        <div className="bg-neutral-950 w-full md:w-2/5 min-h-[75vh] max-h-[75vh] mt-5 pt-6 rounded-3xl">
+        <div className="bg-neutral-950  w-full md:w-2/5 min-h-[75vh] max-h-[75vh] mt-5 pt-6 rounded-3xl">
           <div className="flex mx-5 min-h-[85%] max-h-[80%]">
             <div className="flex flex-col item-center justify-center items-stretch w-[80%]">
               <RadarChart/>

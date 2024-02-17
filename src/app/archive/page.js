@@ -1,9 +1,11 @@
 'use client'
 
 import ArchiveCard from "../components/ArchiveCard"
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import { StoreContext } from "../context"
 import LoadingText from "../components/LoadingText"
+import { Octokit } from 'octokit'
+
 
 const archives_file = [
     {"id":1,"project_title":"The Deadpool and Wolverine","projdesc":"This is cool we are legion","imageurl":"https://source.unsplash.com/8n7ipHhI8CI"},
@@ -23,9 +25,34 @@ const archives_file = [
 
 export default function Archive() {
     const {cardData, setcardData} = useContext(StoreContext)
-   
+    const [archives_data, setArchives_data] = useState([])
+    const [gitRepo, setgitRepo] = useState([])
+    const octokit = new Octokit({
+        auth:process.env.TOKEN
+      })
+    const fetchRepo= async()=>{
+        await octokit.request("GET https://api.github.com/users/12-Twelvve/repos",{
+          per_page:100,
+          headers: {
+            "content-type": "text/plain",
+          }
+        }).then(res=>{
+          console.log(res)
+          let repos =[]
+          res.data.forEach(repo => {
+            let tempRepo = {}
+            tempRepo.name = repo.name
+            tempRepo.language = repo.language
+            tempRepo.description = repo.description
+            tempRepo.url = repo.html_url
+            repos.push(tempRepo)
+          });
+          setgitRepo(repos)
+        })
+    }    
     useEffect(()=>{
         setcardData(archives_file)
+        fetchRepo()
     },[])
     return (
         <div className="bg-bggrayarc overflow-auto py-1 mt-5 max-md:mt-10 h-[80vh] w-[90%] m-auto custom-scrollbar">

@@ -5,15 +5,14 @@ import NameDiv from '../components/NameDiv'
 
 export default function AboutMe() {
   return (
-    <div className="px-12 py-1  h-[85vh]">
+    <div className="px-12 py-1  h-[80vh]">
     <div className ='flex flex-col'>
     <div className="gap-5 flex max-md:flex-col  md:flex-row lg:flex-row xl:flex-row  max-md:gap-0">
       {/* left side name panel bar */}
-      <div className="w-full md:w-3/5 max-md:w-full max-md:mt-10  mt-5  md:min-h-[55vh] md:max-h-[55vh]"> 
+      <div className="w-full md:w-3/5 max-md:w-full max-md:mt-10  mt-5  md:min-h-[50vh] md:max-h-[50vh]"> 
         <div className="flex flex-col max-md:max-w-full">
           {/* Name Div top */}
           <NameDiv/>
-          
           {/* middle panel */}
           <div className="bg-neutral-950 flex flex-col justify-between rounded-3xl md:flex-row mt-5 pl-7 pr-7 pt-1 pb-1 gap-5  min-h-[23vh] max-h-[23vh] max-md:min-h-[35vh] max-md:max-h-[35vh]">
             <div className={`text-white font-bold h-0.5 mt-5 sm:text-sm lg:text-lg `}>
@@ -51,7 +50,7 @@ export default function AboutMe() {
       </div>
     </div>
     {/* bottom panel */}
-    <div className="mt-5 gap-5 flex  md:min-h-[20vh] md:max-h-[20vh] max-md:min-h-[20vh] max-md:max-h-[20vh]  max-md:gap-1 max-md:flex-col  md:flex-row lg:flex-row xl:flex-row">
+    <div className="mt-5 gap-5 flex  md:min-h-[15vh] md:max-h-[15vh] max-md:min-h-[20vh] max-md:max-h-[20vh]  max-md:gap-1 max-md:flex-col  md:flex-row lg:flex-row xl:flex-row">
       <div className="bg-neutral-950 rounded-3xl md:w-[350px] max-md:min-h-[10vh] flex justify-center items-center">
         <div className="text-white lg:text-50xl  font-bold">
           An Artist
