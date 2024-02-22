@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className=" mt-12 px-12 flex justify-between md:w-[55%] h-10 text-xs font-jua text-center sm:text-sm md:text-md lg:text-lg xl:text-xl text-white">
             <Link href="/" className="w-[20%] h-10 flex item-center text-white no-underline">
                 <div className={`flex rounded-mini ${pathname === '/' ? 'bg-white text-black' : 'bg-black'} w-[100%] h-10  items-center`}>
-                    <div className="inline-block w-[100%]">{`</$> Twelvve`}</div>
+                    <div className="inline-block w-[100%]">{`</$> Root`}</div>
                 </div>
             </Link>
             <Link href="/about" className=" w-[20%] h-10 flex item-center text-white no-underline">
