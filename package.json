@@ -11,6 +11,7 @@
   "dependencies": {
     "chart.js": "^4.4.1",
     "next": "14.0.3",
+    "nodemailer": "^6.9.11",
     "octokit": "^3.1.2",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",

@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import joyImage from '../data/images/joyboy.png'
 import NameDiv from '../components/NameDiv'
 
 
@@ -39,13 +37,13 @@ export default function AboutMe() {
             Communication, Team Player, Critical Thinking, Problem Solving, Presentation, Energetic, Loyal
           </div>
         </div>
-        <div className=" pl-5 pr-5 mt-10 ">
+        <div className=" pl-5 pr-a5 mt-10 ">
         <div className={`text-white font-bold h-0.5 mt-5 sm:text-sm lg:text-25xl `}>
-        My dream is to be the King of the 
+        My dream is to be the God.
          </div>
-         {/* <div className="pt-10 mt-5 text-black">
+         <div className="pt-10 mt-5 text-black">
             King of the World
-          </div> */}
+          </div>
          </div>
       </div>
     </div>

@@ -1,7 +1,48 @@
+'use client'
+
 import NameDiv from '../components/NameDiv'
+
+import React, { useState } from 'react';
 
 
 export default function Contacts() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    console.log(formData)
+    e.preventDefault();
+    try {
+      const response = await fetch('/api', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data); // Log success message
+        // Handle success, show a confirmation message, etc.
+      } else {
+        // Handle error response
+        console.error('Client : failed to send email:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Client : error sending email:', error);
+    }
+  };
+
+
   return (
     <div className="px-12 py-1  h-[85vh]">
     <div className="gap-5 flex max-md:flex-col  md:flex-row lg:flex-row xl:flex-row  max-md:gap-0">
@@ -62,24 +103,6 @@ export default function Contacts() {
                     </a>
                 </div>
                 
-                {/* <div class="flex justify-center p-6 pt-2 gap-7">
-                  <a href="#facebook"
-                    class="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-blue-400">
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="#twitter"
-                    class="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-light-blue-600 to-light-blue-400">
-                    <i
-                      class="fab fa-twitter" aria-hidden="true">
-                    </i>
-                  </a>
-                  <a href="#instagram"
-                    class="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-purple-400"><i
-                      class="fab fa-instagram" aria-hidden="true">
-                    </i>
-                  </a>
-                </div> */}
-
             </div>
 
           </div>
@@ -99,14 +122,14 @@ export default function Contacts() {
           </div>
         </div>
         {/* form */}
-        <form class=" max-w-sm max-sm:ps-10 mx-auto mt-10 flex flex-col gap-7">
+        <form onSubmit={handleSubmit} class=" max-w-sm max-sm:ps-10 mx-auto mt-10 flex flex-col gap-7">
         <div class="relative block">
           <span class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
             </svg>
           </span> 
-          <input type="text" id="person_name" 
+          <input type="text" id="person_name" name="name" value={formData.name} onChange={handleChange}
             class="block w-[85%] max-sm:w-[70%] ps-10 p-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  dark:bg-bggrayarc dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                   placeholder="Your Beautiful Name"/>
         </div>
@@ -117,12 +140,12 @@ export default function Contacts() {
               <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
             </svg>
           </span>
-          <input type="text" id="email-address-icon" 
+          <input type="text" id="email-address-icon" name="email" value={formData.email} onChange={handleChange}
             class="block w-[85%] max-sm:w-[70%] ps-10 p-3  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-bggrayarc dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                   placeholder="your@email.address"/>
         </div>
         <div className='block'>
-        <textarea id="message" rows="4" 
+        <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="4" 
           class="block w-[85%] max-sm:w-[70%] p-3 pr-10  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-bggrayarc dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
           placeholder="Leave your thoughts..."></textarea>
         </div>

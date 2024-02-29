@@ -104,7 +104,7 @@ export default async function Home() {
 
           {/* quotes */}
           <div className="flex  flex-col justify-center  min-h-[15%] max-h-[15%]">
-            <div className="text-center text-lg">
+            <div className="text-center text-sm ">
                {quoteoftheday.content}
             </div>
             <div className="text-center text-lg font-bold">
