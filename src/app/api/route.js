@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function GET(){
-    return NextResponse.json({
+    return NextResponse.status(200).json({
         hello:"sunshine", 
     });
 }

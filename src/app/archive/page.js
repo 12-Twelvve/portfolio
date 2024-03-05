@@ -3,7 +3,6 @@
 import ArchiveCard from "../components/ArchiveCard"
 import { useContext, useEffect, useState } from "react"
 import { StoreContext } from "../context"
-import LoadingText from "../components/LoadingText"
 import { Octokit } from 'octokit'
 
 
@@ -43,7 +42,6 @@ const git_images = [
    ]
 
 export default function Archive() {
-    const [isLoading, setIsLoading] = useState(true);
     const {cardData, setcardData} = useContext(StoreContext)
     
     const getRandomImage = () => {
@@ -53,7 +51,6 @@ export default function Archive() {
     const octokit = new Octokit({
         auth:process.env.TOKEN
       })
-
     const fetchRepo= async()=>{
         await octokit.request("GET https://api.github.com/users/12-Twelvve/repos",{
           per_page:100,
@@ -73,7 +70,6 @@ export default function Archive() {
             repos.push(tempRepo)
           });
           setcardData(repos);
-          setIsLoading(false)
         })
     }
     useEffect(()=>{
@@ -82,15 +78,12 @@ export default function Archive() {
       };
       fetchData();
     },[])
-    if (isLoading){
-      return <LoadingText/>
-    }
     return (
         <div className="bg-bggrayarc overflow-auto py-1 mt-5 max-md:mt-10 h-[80vh] w-[90%] m-auto custom-scrollbar">
         <div class="columns-1 gap-4 space-y-4 p-4 sm:columns-2 md:columns-4 lg:columns-4">
-            {cardData?cardData.map((a, index)=>(
+            {cardData.map((a, index)=>(
                 <ArchiveCard key={index} archive={a}/>
-            )):<LoadingText/>}
+            ))}
         </div>
         </div>
       )

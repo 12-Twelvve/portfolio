@@ -118,7 +118,7 @@ export default function Contacts() {
           Fall In <span className='text-red font-bold'>LOVE</span>  With Me?
           </div>
           <div className="mt-2">
-            It's $12 per hour.
+            It@apos;s $12 per hour.
           </div>
         </div>
         {/* form */}
