@@ -41,8 +41,8 @@ export default function AboutMe() {
         <div className={`text-white font-bold h-0.5 mt-5 sm:text-sm lg:text-25xl `}>
         My dream is to be the God.
          </div>
-         <div className="pt-10 mt-5 text-black">
-            King of the World
+         <div className="pt-10 mt-5 text-white">
+           Those who do not have a dream usually steal others dreams.
           </div>
          </div>
       </div>
