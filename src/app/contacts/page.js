@@ -53,7 +53,9 @@ export default function Contacts() {
           <NameDiv/>
 
           {/* left bottom panel */}
-          <div className="bg-neutral-950 flex flex-col rounded-3xl md:flex-row mt-5 pl-7 pr-7 pt-1 pb-1 gap-5  min-h-[45vh] max-h-[45vh] max-md:min-h-[50vh] max-md:max-h-[50vh]">
+          <div className="bg-cover flex flex-col rounded-3xl md:flex-row mt-5 pl-7 pr-7 pt-1 pb-1 gap-5  min-h-[45vh] max-h-[45vh] max-md:min-h-[50vh] max-md:max-h-[50vh]"
+                style={{  backgroundImage:'url(/images/asss.png)'}}
+                >
             {/* <div className={`text-white font-bold h-0.5 mt-5 sm:text-sm lg:text-lg `}>
             </div> */}
             <div className="w-full text-center sm:p-8">
@@ -109,7 +111,9 @@ export default function Contacts() {
         </div>
       </div>
       {/* right side panel */}
-      <div className="bg-neutral-950 max-sm:h-[60vh] w-full md:w-2/5 mt-5 pt-6 rounded-3xl ">
+      <div className="bg-cover max-sm:h-[60vh] w-full md:w-2/5 mt-5 pt-6 rounded-3xl "
+              style={{  backgroundImage: 'url(/images/asss.png)'}}
+              >
         <div className='text-center pl-5 pr-5'>
           <div className={`mt-10 text-white font-sans h-0.5  sm:text-sm lg:text-25xl`}>
             Hi, How Can I Help You?
@@ -152,7 +156,7 @@ export default function Contacts() {
 
         <div className='flex justify-center'>
         <button type="submit" className="bg-gray-500 rounded-md bg-gray-100 px-3 py-2 text-sm 
-                font-semibold text-white hover:bg-bggrayarc border-gray-300">
+                font-semibold text-white hover:bg-bggrayarc border-gray-300 cursor-pointer">
           Submit</button>
         </div>  
       </form>

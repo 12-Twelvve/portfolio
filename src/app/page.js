@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import boaImage from './data/images/sep2.jpg'
+import boaImage from '@/data/images/sep2.jpg'
 import RadarChart from './components/RadarChart'
 import NameDiv from './components/NameDiv' 
 import World from './components/World'
+import LinkAllApp from './components/LinkAllApp'
 
 async function getQuote(){
   // const res = await fetch("https://api.quotable.io/random", {cache:"no-store"}); //each reload
@@ -26,48 +27,48 @@ export default async function Home() {
             {/* bottom panel */}
             <div className="flex flex-col md:flex-row mt-4 ">
               {/* left card */}
-              <div className="w-full md:w-1/2 p-1">
-                <div className="h-[45vh]">
-                <div className=" flex flex-col items-stretch justify-center items-center bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl">
-                  <div className="flex flex-col items-stretch justify-center items-center  px-5 py-2 rounded-3xl max-md:mt-4"> 
+              <div className="w-full md:w-1/2 p-1" >
+                <div className="h-[45vh]" >
+                <div className=" flex flex-col items-stretch justify-center items-center bg-cover min-h-[45vh] max-h-[45vh] rounded-3xl" style={{  backgroundImage:'url(/images/asss.png)'}}>
+                  <div className=" flex flex-col items-stretch justify-center items-center  px-5 py-2 rounded-3xl max-md:mt-4"> 
                     <div className="flex items-stretch justify-between gap-4">
-                      <div className="bg-neutral-700 flex flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
+                      <div className="bg-neutral-900 flex flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
                         <div className="text-white text-center text-40xl text-center font-bold">
                             4
                         </div>
                         <div className="text-center text-lg ">
-                           Cities
+                           Kills
                         </div>
                       </div>
-                      <div className="bg-neutral-700 flex  flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
+                      <div className="bg-neutral-900 flex  flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
                         <div className="text-white text-center text-40xl text-center font-bold">
                             21
                         </div>
                         <div className="text-center text-lg ">
-                          Projects
+                          Hunt
                         </div>
                       </div>
-                      <div className="bg-neutral-700 flex flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
+                      <div className="bg-neutral-900 flex flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
                         <div className="text-white text-center text-40xl text-center font-bold">
-                            7X
+                            69
                         </div>
                         <div className="text-center text-lg ">
-                          Faster
+                          weapons
                         </div>
                       </div>
                     </div>
 
-                    <div className="bg-neutral-700 flex  h-[60px] flex-col justify-center mt-4 rounded-3xl" >
+                    <div className="bg-neutral-900 flex  h-[60px] flex-col justify-center mt-4 rounded-3xl" >
                       <div className="text-center text-lg font-bold">
-                          Built Like A Machine
+                          Built Like The God
                       </div>
                     </div>
-                    <div className="bg-neutral-700 flex flex-col items-center mt-4 px-3 py-4 rounded-3xl">
+                    <div className="bg-neutral-900 flex flex-col items-center mt-4 px-3 py-4 rounded-3xl">
                       <div className="text-white text-center text-50xl text-center font-bold">
-                          100%
+                          $5,690,314,276
                       </div>
                       <div className="text-center text-lg ">
-                          Success Rate
+                          Dead or Alive
                       </div>
                     </div>
 
@@ -78,8 +79,9 @@ export default async function Home() {
               {/* icons card */}
               <div className="w-full md:w-1/2 p-1">
                 <div className="h-[45vh]">
-                  <div className="bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl">
+                  <div className="bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl flex">
                     {/* <World /> */}
+                    <LinkAllApp/>
                   </div>
                 </div>
               </div>
@@ -88,12 +90,15 @@ export default async function Home() {
         </div>
 
         {/* right side kinng panel */}
-        <div className="bg-neutral-950  w-full md:w-2/5 min-h-[75vh] max-h-[75vh] mt-5 pt-6 rounded-3xl">
-          <div className="flex mx-5 min-h-[85%] max-h-[80%]">
-            <div className="flex flex-col item-center justify-center items-stretch w-[80%]">
+        <div className="bg-cover w-full md:w-2/5 min-h-[75vh] max-h-[75vh] mt-5 pt-6 rounded-3xl"
+              style={{  backgroundImage:'url(/images/asss.png)'}}
+      
+        >
+          <div className="flex flex-col md:flex-row  mx-5 min-h-[85%] max-h-[80%] bg-neutral-950">
+            <div className="flex flex-col item-center justify-center items-stretch md:w-[80%]">
               <RadarChart/>
             </div>
-            <div className=' w-[20%]'>
+            <div className='w-full md:w-[20%] mt-4 md:mt-0'>
             <Image
               src={boaImage}
               className="w-full h-full object-cover rounded-2xl"

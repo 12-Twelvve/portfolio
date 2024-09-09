@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react"
 import { Chart } from "chart.js/auto"
-import skills from '../data/skills.json' 
+import skills from '../../data/skills.json' 
 
 export default function RadarChart(){
     const chartRef = useRef(null)

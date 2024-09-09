@@ -1,4 +1,4 @@
-import { git_images } from "../data/images";
+import { git_images } from "../../data/images";
 
 export async function GenerateStaticParams() {
     const getRandomImage = () => {
