@@ -26,15 +26,15 @@ export default function ArchiveCardDetail({card}) {
               {/* right side panel */}
               <div className="bg-neutral-950 shadow-xl shadow-gray-100 min-h-[66vh] max-h-[66vh] max-sm:h-[60vh] w-full md:w-2/5 mt-6 pt-6 rounded-3xl">
                 <div className="md:w-[40%] mx-3 mx-auto ">
-                <img src={card?.image_url} class="object-contain w-full h-[40vh] shadow-custom" />
+                <img src={card?.image_url} className="object-contain w-full h-[40vh] shadow-custom" />
                 </div>
-                <div class="w-full text-center sm:p-8">
+                <div className="w-full text-center sm:p-8">
                   <a href={card?.html_url} className="no-underline ">
-                    <p class="text-base text-white sm:text-lg ">Github </p>
+                    <p className="text-base text-white sm:text-lg ">Github </p>
                   </a>
                   {/* {card?.language.map(lang=>(
                     ))} */}
-                    <p class="text-base text-white sm:text-lg ">{card?.language}</p>
+                    <p className="text-base text-white sm:text-lg ">{card?.language}</p>
                 </div>
               </div>
             </div> 

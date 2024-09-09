@@ -80,7 +80,7 @@ export default function Archive() {
     },[])
     return (
         <div className="bg-bggrayarc overflow-auto py-1 mt-5 max-md:mt-10 h-[80vh] w-[90%] m-auto custom-scrollbar">
-        <div class="columns-1 gap-4 space-y-4 p-4 sm:columns-2 md:columns-4 lg:columns-4">
+        <div className="columns-1 gap-4 space-y-4 p-4 sm:columns-2 md:columns-4 lg:columns-4">
             {cardData.map((a, index)=>(
                 <ArchiveCard key={index} archive={a}/>
             ))}

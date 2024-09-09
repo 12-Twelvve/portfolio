@@ -59,7 +59,7 @@ export default async function Home() {
 
                     <div className="bg-neutral-700 flex  h-[60px] flex-col justify-center mt-4 rounded-3xl" >
                       <div className="text-center text-lg font-bold">
-                          Built Like A King From OPM
+                          Built Like A Machine
                       </div>
                     </div>
                     <div className="bg-neutral-700 flex flex-col items-center mt-4 px-3 py-4 rounded-3xl">
@@ -79,7 +79,7 @@ export default async function Home() {
               <div className="w-full md:w-1/2 p-1">
                 <div className="h-[45vh]">
                   <div className="bg-neutral-950 min-h-[45vh] max-h-[45vh] rounded-3xl">
-                    <World />
+                    {/* <World /> */}
                   </div>
                 </div>
               </div>

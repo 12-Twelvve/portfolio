@@ -6,7 +6,7 @@ export default function NameDiv() {
   return (
           <div className="flex flex-col align-center justify-between items-center bg-neutral-950
                             pl-1 pr-1 pt-1 pb-1 gap-5 rounded-3xl no-underline shadow-xl shadow-gray-100 md:flex-row max-md:max-w-full md:min-h-[30vh] md:max-h-[30vh] ">
-              <div class="flex flex-col justify-between p-4  font-jua ">
+              <div className="flex flex-col justify-between p-4  font-jua ">
                   <div className="text-white font-bold ">
                     Data Enthusiast
                   </div>
