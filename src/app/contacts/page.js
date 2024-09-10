@@ -64,7 +64,7 @@ export default function Contacts() {
                 <p className="text-base text-white sm:text-lg ">koobear99@gmail.com</p>
                 <div className=" max-sm:w-[90%] items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
                     
-                    <a href="https://www.facebook.com/twelvve.nepo/" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-bggrayarc dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                    <a href="https://www.facebook.com/twelvve.nepo/" target="_blank" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-bggrayarc dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                       <svg className="me-3 w-7 h-7" aria-hidden="true" 
                             focusable="false" data-prefix="fab" data-icon="facebook"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -76,7 +76,7 @@ export default function Contacts() {
                               <div className="-mt-1 font-sans text-sm font-semibold">Facebook</div>
                           </div>
                     </a>
-                    <a href="https://github.com/12-Twelvve" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-bggrayarc dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                    <a href="https://github.com/12-Twelvve" target="_blank" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-bggrayarc dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                     <svg className="me-3 w-7 h-7" aria-hidden="true" 
                             focusable="false" data-prefix="fab" data-icon="github"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
                         aria-describedby="desc" role="img">
@@ -90,7 +90,7 @@ export default function Contacts() {
                             <div className="-mt-1 font-sans text-sm font-semibold">Github</div>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/kuber-budhathoki-4866b61b9/" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-bggrayarc dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                    <a href="https://www.linkedin.com/in/kuber-budhathoki-4866b61b9/"  target="_blank" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-bggrayarc dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                     <svg className="me-3 w-7 h-7" aria-hidden="true" 
                             focusable="false" data-prefix="fab" data-icon="github"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
                         aria-describedby="desc" role="img">

@@ -34,10 +34,10 @@ export default async function Home() {
                     <div className="flex items-stretch justify-between gap-4">
                       <div className="bg-neutral-900 flex flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
                         <div className="text-white text-center text-40xl text-center font-bold">
-                            4
+                            1996
                         </div>
                         <div className="text-center text-lg ">
-                           Kills
+                           Rank
                         </div>
                       </div>
                       <div className="bg-neutral-900 flex  flex-col items-center w-[80px] h-[70px] px-3 py-1 rounded-3xl">
@@ -53,7 +53,7 @@ export default async function Home() {
                             69
                         </div>
                         <div className="text-center text-lg ">
-                          weapons
+                          Weapons
                         </div>
                       </div>
                     </div>

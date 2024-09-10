@@ -1,9 +1,20 @@
+'use_client'
+
 import Link from 'next/link';
+import { useContext } from 'react';
+import { StoreContext } from '../context';
+
 
 export default function ArchiveCard({archive}){
-    
+    const { setSelectedArchive } = useContext(StoreContext); // Access context to set selected archive
+    // Handle click to set the selected archive
+    const handleClick = () => {
+        setSelectedArchive(archive);
+    };
+        
     return (
-        <Link href={`/archive/${archive.id}`}>
+        <div onClick={handleClick}>
+        <Link href={`/archive/${archive.id}`} >
         <div className="group relative cursor-pointer overflow-hidden rounded-md">
         <img src={archive.image_url} className="object-cover w-full h-full" />
         <div className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100">
@@ -19,5 +30,6 @@ export default function ArchiveCard({archive}){
         </div>
         </div>
         </Link>
+        </div>
     )
 }

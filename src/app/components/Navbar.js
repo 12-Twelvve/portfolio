@@ -35,11 +35,17 @@ const Navbar = () => {
                     <div className="inline-block w-[100%]">{`<#> Archive`}</div>
                 </div>
             </Link>
-            <Link href="/archive" className={`absolute w-[10%] max-md:w-[15%] h-10 right-[25%] max-md:right-[12%] max-md:top-[11%]  item-center text-white no-underline`}>
-                    <div  className={`flex rounded-mini ${pathname.startsWith('/archive/') ? 'bg-white text-black' : 'hidden'} w-[100%] h-10  items-center`} >
-                        <div className=" w-[100%]">{`<\\> Back`}</div>
+            {  pathname.startsWith('/archive/') ? (
+                <Link 
+                    href="/archive" 
+                    className="absolute w-[10%] max-md:w-[15%] h-10 right-[25%] max-md:right-[12%] max-md:top-[11%] item-center text-white no-underline"
+                >
+                    <div className="flex rounded-mini bg-white text-black w-[100%] h-10 items-center">
+                    <div className="w-[100%]">{`<\\> Back`}</div>
                     </div>
-            </Link>
+                </Link>
+                ) : null
+            }
             
         </div>
         </>

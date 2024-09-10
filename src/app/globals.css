@@ -45,7 +45,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #011c23; /* Adjust as needed */
+  background-color: #2e2e2e; /* Adjust as needed */
   border-radius: 14px;
 }
 
@@ -53,7 +53,7 @@ body {
 .custom-scrollbar {
   scrollbar-width: thin;
   border-radius: 14px;
-  scrollbar-color: #011c23 transparent; /* Adjust as needed */
+  scrollbar-color: #2e2e2e transparent; /* Adjust as needed */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -63,7 +63,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #011c23; /* Adjust as needed */
+  background-color: #2e2e2e; /* Adjust as needed */
   border-radius: 14px;
 }
 

@@ -1,10 +1,9 @@
 'use client'
 
 import ArchiveCard from "../components/ArchiveCard"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import { StoreContext } from "../context"
 import { Octokit } from 'octokit'
-
 
 const git_images = [
   "https://pics.craiyon.com/2023-11-06/02e483d55bd34963ba09b29e5d582a6f.webp",
@@ -55,7 +54,7 @@ export default function Archive() {
         await octokit.request("GET https://api.github.com/users/12-Twelvve/repos",{
           per_page:100,
           headers: {
-            "content-type": "text/plain",
+            "content-type": "application/json",
           }
         }).then(res=>{
           let repos =[]
@@ -70,6 +69,7 @@ export default function Archive() {
             repos.push(tempRepo)
           });
           setcardData(repos);
+          
         })
     }
     useEffect(()=>{
