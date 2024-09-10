@@ -16,7 +16,7 @@ export default function ArchiveCard({archive}){
         <div onClick={handleClick}>
         <Link href={`/archive/${archive.id}`} >
         <div className="group relative cursor-pointer overflow-hidden rounded-md">
-        <img src={archive.image_url} className="object-cover w-full h-full" />
+        <img src={archive.image_url} className="object-cover w-full h-full opacity-50" />
         <div className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100">
             <div className="absolute pointer-events-none inset-1 bg-black opacity-40"></div>
             <div className="absolute inset-0 flex flex-col pb-8">

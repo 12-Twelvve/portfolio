@@ -17,7 +17,7 @@ export default function NameDiv() {
                     KUBER BUDHATHOKI
                   </div>
               </div>
-              <div className="md:w-[40%] mx-3">
+              <div className="md:w-[40%] mx-3 ">
               <Image
                   src={joyImage}
                   className="object-cover h-auto max-w-full rounded-3xl  "

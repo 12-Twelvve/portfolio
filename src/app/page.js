@@ -98,7 +98,7 @@ export default async function Home() {
             <div className="flex flex-col item-center justify-center items-stretch md:w-[80%]">
               <RadarChart/>
             </div>
-            <div className='w-full md:w-[20%] mt-4 md:mt-0'>
+            <div className='w-full md:w-[20%] mt-4 md:mt-0 opacity-50'>
             <Image
               src={boaImage}
               className="w-full h-full object-cover rounded-2xl"
